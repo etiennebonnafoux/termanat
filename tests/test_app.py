@@ -55,8 +55,8 @@ def test_clicking_a_bone_selects_it():
         view = app.query_one("#explore-figure", FigureView)
         row = next(i for i, m in enumerate(MASK) if "K" in m)
         col = MASK[row].index("K")
-        # padding is 1 row / 2 columns
-        await pilot.click(view, offset=(col + 2, row + 1))
+        # padding is 0 rows / 2 columns
+        await pilot.click(view, offset=(col + 2, row))
         await pilot.pause()
         assert view.highlight == "K"
         assert "Patella" in info_text(app)

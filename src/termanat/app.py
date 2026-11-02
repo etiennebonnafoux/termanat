@@ -63,8 +63,8 @@ class FigureView(Static):
     DEFAULT_CSS = f"""
     FigureView {{
         width: {VIEW_WIDTH + 4};
-        height: {VIEW_HEIGHT + 2};
-        padding: 1 2;
+        height: {VIEW_HEIGHT};
+        padding: 0 2;
     }}
     """
 
