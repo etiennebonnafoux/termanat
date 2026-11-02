@@ -3,7 +3,8 @@
 Discover and learn anatomy inside your terminal.
 
 `termanat` is a TUI (terminal user interface) for exploring the human body,
-drawn in ASCII art. Version 0.1.0 covers the skeleton.
+drawn in ASCII art. It covers the skeleton for now, at first-year medicine
+level (PASS / L.AS in France), in English and French.
 
 ```
               .-"""""""""-.
@@ -50,7 +51,7 @@ drawn in ASCII art. Version 0.1.0 covers the skeleton.
 With [uv](https://docs.astral.sh/uv/):
 
 ```bash
-uv tool install git+https://github.com/etiennebonnafoux/termanat@v0.1.0
+uv tool install git+https://github.com/etiennebonnafoux/termanat@v0.2.0
 ```
 
 Then run:
@@ -62,17 +63,29 @@ termanat
 Or try it without installing:
 
 ```bash
-uvx --from git+https://github.com/etiennebonnafoux/termanat@v0.1.0 termanat
+uvx --from git+https://github.com/etiennebonnafoux/termanat@v0.2.0 termanat
 ```
 
 ## Usage
 
 - **Explore** (`e`): move through the list with the arrow keys, or click a bone
-  on the skeleton. The bone lights up and you get its Latin name, where it is,
-  how many you have, and a fun fact.
+  on the skeleton. The bone lights up and you get its Latin name, type,
+  anatomical landmarks, joints, clinical notes and a fun fact. Press `Tab` to
+  move to the info panel and scroll it with the arrow keys.
 - **Quiz** (`t`): a bone is highlighted; press `1`-`4` (or click) to name it,
   then `Enter` or `n` for the next question.
+- `l` switches between English and French.
 - `q` quits.
+
+The language follows your system locale (`LANG`). To force it:
+
+```bash
+termanat --lang fr
+```
+
+The French version uses the current international nomenclature (fibula,
+patella, ulna...) with the former names (péroné, rotule, cubitus...) shown
+alongside.
 
 The skeleton is shown from the front in anatomical position (palms forward),
 so the left side of the screen is the body's right side.

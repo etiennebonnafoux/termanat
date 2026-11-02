@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.2.0
+
+- French translation (Français), using the current anatomical nomenclature
+  taught in French medical school (PASS / L.AS), with the former names noted
+  (péroné, rotule, cubitus, omoplate...). The language follows your system
+  locale; force it with `--lang fr` or `--lang en`, or press `l` in the app to
+  switch.
+- Much more detail on each bone, at first-year medicine level: bone type,
+  anatomical landmarks, joints, and clinical notes (classic fractures, nerves
+  at risk, procedures).
+- Translated key bar at the bottom of the screen.
+
 ## 0.1.0
 
 First release: the skeleton.

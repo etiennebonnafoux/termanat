@@ -1,4 +1,7 @@
 import asyncio
+import io
+
+from rich.console import Console
 
 from textual.widgets import Button, OptionList, Static, TabbedContent
 
@@ -7,9 +10,16 @@ from termanat.bones import BONES, BY_KEY
 from termanat.skeleton import MASK
 
 
-def run(coro_fn):
+def info_text(app):
+    """The explore info panel as plain text."""
+    console = Console(width=200, file=io.StringIO(), color_system=None)
+    console.print(app.query_one(ExplorePane).current_info)
+    return console.file.getvalue()
+
+
+def run(coro_fn, lang="en"):
     async def go():
-        app = TermanatApp(seed=1)
+        app = TermanatApp(seed=1, lang=lang)
         async with app.run_test(size=(110, 45)) as pilot:
             await coro_fn(app, pilot)
 
@@ -20,8 +30,9 @@ def test_explore_starts_on_first_bone():
     async def check(app, pilot):
         view = app.query_one("#explore-skeleton", SkeletonView)
         assert view.highlight == BONES[0].key
-        info = str(app.query_one("#info", Static).render())
+        info = info_text(app)
         assert BONES[0].latin in info
+        assert "Landmarks" in info and "Clinical notes" in info
 
     run(check)
 
@@ -45,7 +56,7 @@ def test_clicking_a_bone_selects_it():
         await pilot.click(view, offset=(col + 2, row + 1))
         await pilot.pause()
         assert view.highlight == "K"
-        assert "Patella" in str(app.query_one("#info", Static).render())
+        assert "Patella" in info_text(app)
 
     run(check)
 
@@ -78,7 +89,7 @@ def test_quiz_flow():
         await pilot.pause()
         assert (quiz.score, quiz.total) == (1, 2)
         assert quiz.query_one(f"#choice-{wrong}", Button).variant == "error"
-        assert quiz.answer.name.lower() in str(quiz.query_one("#feedback", Static).render())
+        assert quiz.answer.name("en") in str(quiz.query_one("#feedback", Static).render())
 
     run(check)
 
@@ -96,7 +107,7 @@ def test_version_flag(capsys):
 
     with pytest.raises(SystemExit):
         main(["--version"])
-    assert "termanat 0.1.0" in capsys.readouterr().out
+    assert "termanat 0.2.0" in capsys.readouterr().out
 
 
 def test_tab_keys_work_while_list_is_focused():
@@ -121,5 +132,46 @@ def test_enter_goes_to_next_question():
         await pilot.press("enter")
         await pilot.pause()
         assert not quiz.answered
+
+    run(check)
+
+
+def test_french_interface():
+    async def check(app, pilot):
+        info = info_text(app)
+        assert "Crâne" in info and "Repères anatomiques" in info
+        assert app.query_one(OptionList).get_option("I").prompt == "Fibula"
+        assert "Quitter" in str(app.query_one("#keys", Static).render())
+
+    run(check, lang="fr")
+
+
+def test_language_toggle_updates_everything():
+    async def check(app, pilot):
+        app.query_one(OptionList).focus()
+        await pilot.press("down")  # Mandible
+        await pilot.press("t", "1")
+        await pilot.pause()
+        quiz = app.query_one(QuizPane)
+        answer = quiz.answer
+
+        await pilot.press("l")
+        await pilot.pause()
+        assert app.lang == "fr"
+        assert app.query_one(TabbedContent).get_tab("explore").label.plain == "Explorer les os"
+        assert "Quel os" in str(quiz.query_one("#question", Static).render())
+        label = str(quiz.query_one("#choice-0", Button).label)
+        assert quiz.choices[0].name("fr") in label
+        assert answer.name("fr") in str(quiz.query_one("#feedback", Static).render()) or (
+            "Bonne réponse" in str(quiz.query_one("#feedback", Static).render())
+        )
+        info = info_text(app)
+        assert "Mandibule" in info
+        assert app.query_one(OptionList).highlighted == 1
+
+        await pilot.press("l")
+        await pilot.pause()
+        assert app.lang == "en"
+        assert "Mandible" in info_text(app)
 
     run(check)

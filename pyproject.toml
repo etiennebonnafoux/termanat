@@ -1,6 +1,6 @@
 [project]
 name = "termanat"
-version = "0.1.0"
+version = "0.2.0"
 description = "Discover and learn anatomy inside your terminal"
 readme = "README.md"
 authors = [
