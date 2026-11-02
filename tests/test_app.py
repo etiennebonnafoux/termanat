@@ -5,9 +5,12 @@ from rich.console import Console
 
 from textual.widgets import Button, OptionList, Static, TabbedContent
 
-from termanat.app import ExplorePane, QuizPane, SkeletonView, TermanatApp, main
-from termanat.bones import BONES, BY_KEY
-from termanat.skeleton import MASK
+from termanat.app import ExplorePane, FigureView, QuizPane, TermanatApp, main
+from termanat.systems import BY_ID, SYSTEMS
+
+SKELETON = BY_ID["skeleton"]
+BONES = SKELETON.structures
+MASK = SKELETON.mask
 
 
 def info_text(app):
@@ -19,7 +22,7 @@ def info_text(app):
 
 def run(coro_fn, lang="en"):
     async def go():
-        app = TermanatApp(seed=1, lang=lang)
+        app = TermanatApp(seed=1, lang=lang, system="skeleton")
         async with app.run_test(size=(110, 45)) as pilot:
             await coro_fn(app, pilot)
 
@@ -28,7 +31,7 @@ def run(coro_fn, lang="en"):
 
 def test_explore_starts_on_first_bone():
     async def check(app, pilot):
-        view = app.query_one("#explore-skeleton", SkeletonView)
+        view = app.query_one("#explore-figure", FigureView)
         assert view.highlight == BONES[0].key
         info = info_text(app)
         assert BONES[0].latin in info
@@ -42,14 +45,14 @@ def test_arrow_keys_change_bone():
         app.query_one(OptionList).focus()
         await pilot.press("down")
         await pilot.pause()
-        assert app.query_one("#explore-skeleton", SkeletonView).highlight == BONES[1].key
+        assert app.query_one("#explore-figure", FigureView).highlight == BONES[1].key
 
     run(check)
 
 
 def test_clicking_a_bone_selects_it():
     async def check(app, pilot):
-        view = app.query_one("#explore-skeleton", SkeletonView)
+        view = app.query_one("#explore-figure", FigureView)
         row = next(i for i, m in enumerate(MASK) if "K" in m)
         col = MASK[row].index("K")
         # padding is 1 row / 2 columns
@@ -67,7 +70,7 @@ def test_quiz_flow():
         await pilot.pause()
         assert app.query_one(TabbedContent).active == "quiz"
         quiz = app.query_one(QuizPane)
-        assert quiz.query_one(SkeletonView).highlight == quiz.answer.key
+        assert quiz.query_one(FigureView).highlight == quiz.answer.key
         assert quiz.answer in quiz.choices and len(set(b.key for b in quiz.choices)) == 4
 
         right = quiz.choices.index(quiz.answer)
@@ -112,7 +115,7 @@ def test_version_flag(capsys):
 
 def test_tab_keys_work_while_list_is_focused():
     async def check(app, pilot):
-        assert app.focused is app.query_one("#bone-list", OptionList)
+        assert app.focused is app.query_one("#structure-list", OptionList)
         await pilot.press("t")
         await pilot.pause()
         assert app.query_one(TabbedContent).active == "quiz"
@@ -158,8 +161,8 @@ def test_language_toggle_updates_everything():
         await pilot.press("l")
         await pilot.pause()
         assert app.lang == "fr"
-        assert app.query_one(TabbedContent).get_tab("explore").label.plain == "Explorer les os"
-        assert "Quel os" in str(quiz.query_one("#question", Static).render())
+        assert app.query_one(TabbedContent).get_tab("explore").label.plain == "Explorer"
+        assert "surbrillance" in str(quiz.query_one("#question", Static).render())
         label = str(quiz.query_one("#choice-0", Button).label)
         assert quiz.choices[0].name("fr") in label
         assert answer.name("fr") in str(quiz.query_one("#feedback", Static).render()) or (
@@ -175,3 +178,54 @@ def test_language_toggle_updates_everything():
         assert "Mandible" in info_text(app)
 
     run(check)
+
+
+def test_switching_systems():
+    async def check(app, pilot):
+        figure = app.query_one("#explore-figure", FigureView)
+        options = app.query_one(OptionList)
+        for system in SYSTEMS[1:] + SYSTEMS[:1]:
+            await pilot.press("s")
+            await pilot.pause()
+            assert app.system is system
+            assert figure.system is system
+            assert figure.highlight == system.structures[0].key
+            assert options.option_count == len(system.structures)
+            assert system.structures[0].name("en") in info_text(app)
+            quiz = app.query_one(QuizPane)
+            assert quiz.answer in system.structures
+            assert app.query_one("#quiz-figure", FigureView).system is system
+
+    run(check)
+
+
+def test_clicking_a_system_tab():
+    async def check(app, pilot):
+        last = SYSTEMS[-1]
+        await pilot.click(f"#systems #{last.id}")
+        await pilot.pause()
+        assert app.system is last
+        assert app.query_one(TabbedContent).active == "explore"
+
+    run(check)
+
+
+def test_system_names_are_translated():
+    async def check(app, pilot):
+        await pilot.press("l")
+        await pilot.pause()
+        tab = app.query_one("#systems #skeleton")
+        assert tab.label.plain == "Squelette"
+
+    run(check)
+
+
+def test_every_structure_renders_in_both_languages():
+    from termanat.app import describe
+
+    console = Console(width=80, file=io.StringIO(), color_system=None)
+    for system in SYSTEMS:
+        for structure in system.structures:
+            for lang in ("en", "fr"):
+                console.print(describe(structure, lang))
+    assert console.file.getvalue()

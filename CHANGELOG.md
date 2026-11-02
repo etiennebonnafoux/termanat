@@ -2,14 +2,19 @@
 
 ## 0.2.0
 
+- Four new body systems next to the skeleton: **muscles**, **digestive
+  system**, **circulation** and **nervous system**, each with its own ASCII
+  figure. Switch with `s`, by clicking the bar under the title, or start on
+  one with `--system`.
 - French translation (Français), using the current anatomical nomenclature
   taught in French medical school (PASS / L.AS), with the former names noted
-  (péroné, rotule, cubitus, omoplate...). The language follows your system
-  locale; force it with `--lang fr` or `--lang en`, or press `l` in the app to
-  switch.
-- Much more detail on each bone, at first-year medicine level: bone type,
-  anatomical landmarks, joints, and clinical notes (classic fractures, nerves
-  at risk, procedures).
+  (péroné, rotule, cubitus, sciatique poplité externe...). The language follows
+  your system locale; force it with `--lang fr` or `--lang en`, or press `l` in
+  the app to switch.
+- Much more detail on every structure, at first-year medicine level: for
+  bones, type, landmarks, joints and clinical notes; for muscles, attachments,
+  action and innervation; for organs, vessels and nerves, constitution,
+  relations, course, branches, territory, function and clinical notes.
 - Translated key bar at the bottom of the screen.
 
 ## 0.1.0

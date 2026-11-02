@@ -4,9 +4,10 @@ correspondance."""
 
 from __future__ import annotations
 
-from .bones import BoneText
+from ...model import StructureText
+from ._bone import BoneText
 
-TEXTS: dict[str, BoneText] = {
+TEXTS: dict[str, StructureText] = {
     "S": BoneText(
         name="Crâne",
         region="Tête",

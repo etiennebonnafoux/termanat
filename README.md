@@ -3,8 +3,9 @@
 Discover and learn anatomy inside your terminal.
 
 `termanat` is a TUI (terminal user interface) for exploring the human body,
-drawn in ASCII art. It covers the skeleton for now, at first-year medicine
-level (PASS / L.AS in France), in English and French.
+drawn in ASCII art, at first-year medicine level (PASS / L.AS in France), in
+English and French. It covers five systems: skeleton, muscles, digestive
+system, circulation and nervous system.
 
 ```
               .-"""""""""-.
@@ -68,12 +69,15 @@ uvx --from git+https://github.com/etiennebonnafoux/termanat@v0.2.0 termanat
 
 ## Usage
 
-- **Explore** (`e`): move through the list with the arrow keys, or click a bone
-  on the skeleton. The bone lights up and you get its Latin name, type,
-  anatomical landmarks, joints, clinical notes and a fun fact. Press `Tab` to
+- **Systems** (`s`): switch between skeleton, muscles, digestive system,
+  circulation and nervous system, or click the bar under the title.
+- **Explore** (`e`): move through the list with the arrow keys, or click a
+  structure on the figure. It lights up and you get its Latin name, type and a
+  detailed description (landmarks, joints, attachments, innervation, course,
+  relations, blood supply, clinical notes...) and a fun fact. Press `Tab` to
   move to the info panel and scroll it with the arrow keys.
-- **Quiz** (`t`): a bone is highlighted; press `1`-`4` (or click) to name it,
-  then `Enter` or `n` for the next question.
+- **Quiz** (`t`): a structure of the current system is highlighted; press
+  `1`-`4` (or click) to name it, then `Enter` or `n` for the next question.
 - `l` switches between English and French.
 - `q` quits.
 
@@ -83,17 +87,24 @@ The language follows your system locale (`LANG`). To force it:
 termanat --lang fr
 ```
 
+To open a given system first:
+
+```bash
+termanat --system nervous
+```
+
 The French version uses the current international nomenclature (fibula,
 patella, ulna...) with the former names (péroné, rotule, cubitus...) shown
 alongside.
 
-The skeleton is shown from the front in anatomical position (palms forward),
+Every figure is shown from the front in anatomical position (palms forward),
 so the left side of the screen is the body's right side.
 
 ## Planned
 
-- Organs, muscles and other body systems
-- More detailed views (skull, hand, foot, spine)
+- More systems (respiratory, urinary, lymphatic...)
+- More detailed views (skull, hand, foot, spine, heart)
+- Quiz on landmarks and innervation
 
 ## Development
 
@@ -102,6 +113,11 @@ uv sync
 uv run termanat
 uv run pytest
 ```
+
+Each body system lives in `src/termanat/systems/<id>/`: an ASCII figure with a
+mask saying which structure each character belongs to (`art.py`), and the texts
+in each language (`texts_en.py`, `texts_fr.py`). `src/termanat/model.py`
+describes the format, and `validate_system` checks it (run by the tests).
 
 To release a new version, bump `version` in `pyproject.toml`, update
 `CHANGELOG.md`, then push a matching tag (for example `v0.2.0`). The release
