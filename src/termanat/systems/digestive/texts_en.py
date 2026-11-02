@@ -133,7 +133,8 @@ TEXTS: dict[str, StructureText] = {
             ],
             "function": [
                 "Pharyngeal, reflex phase of swallowing: the soft palate closes the "
-                "nasopharynx and the epiglottis protects the larynx",
+                "nasopharynx; the airway is protected by elevation and closure of the "
+                "larynx and tilting of the epiglottis",
                 "Passage of air; voice resonance; pharyngeal lymphoid ring (Waldeyer's ring)",
             ],
             "vascularisation": [
@@ -142,13 +143,15 @@ TEXTS: dict[str, StructureText] = {
             ],
             "innervation": [
                 "Pharyngeal plexus: glossopharyngeal nerve (IX, sensory) and vagus nerve "
-                "(X, motor to the constrictors); stylopharyngeus is supplied by IX",
+                "(X, motor to the constrictors); stylopharyngeus is supplied by IX (sensation: "
+                "nasopharynx: V2; laryngopharynx: X)",
             ],
             "clinical": [
                 "Gag reflex: afferent limb IX, efferent limb X",
                 "Pharyngo-oesophageal (Zenker's) diverticulum, posteriorly, just above "
                 "the cricopharyngeus muscle",
-                "Foreign bodies (fish bones) lodged in the piriform recesses",
+                "Foreign bodies (fish bones) lodged in the palatine tonsils, valleculae "
+                "or piriform recesses",
             ],
         },
         fact="The pharynx is the only segment shared by air and food.",
@@ -282,8 +285,9 @@ TEXTS: dict[str, StructureText] = {
                 "superior mesenteric vessels in front",
                 "D4, ascending part: up to the duodenojejunal flexure (L2), held by the "
                 "suspensory muscle of the duodenum (ligament of Treitz)",
-                "Major papilla (hepatopancreatic ampulla, of Vater): bile duct and main "
-                "pancreatic duct, surrounded by the sphincter of Oddi",
+                "Major duodenal papilla: opening of the hepatopancreatic ampulla (of "
+                "Vater), where the bile duct and main pancreatic duct unite; sphincter of "
+                "the ampulla (of Oddi)",
                 "Minor papilla, above it: accessory pancreatic duct",
             ],
             "relations": [
@@ -316,7 +320,7 @@ TEXTS: dict[str, StructureText] = {
         },
         fact=(
             "The duodenojejunal flexure separates upper gastrointestinal bleeding "
-            "(above) from lower (below)."
+            "(above) from lower (below), by the classic definition."
         ),
     ),
     "L": StructureText(
@@ -390,8 +394,8 @@ TEXTS: dict[str, StructureText] = {
         ),
         sections={
             "parts": [
-                "Gallbladder: fundus, body, neck (infundibulum), then the cystic duct "
-                "with its spiral fold (valves of Heister)",
+                "Gallbladder: fundus, body, infundibulum then neck (Hartmann's pouch), "
+                "then the cystic duct with its spiral fold (valves of Heister)",
                 "Right and left hepatic ducts, joining as the common hepatic duct",
                 "The common hepatic duct and the cystic duct form the bile duct",
                 "Bile duct: in the lesser omentum, then behind D1, through the head of "
@@ -401,7 +405,9 @@ TEXTS: dict[str, StructureText] = {
                 "Fundus opposite the right 9th costal cartilage, on the midclavicular line",
                 "Body and neck against D1 and the right colic flexure",
                 "Hepatocystic (Calot's) triangle: cystic duct, common hepatic duct and "
-                "liver; it contains the cystic artery",
+                "liver; it contains the cystic artery (Calot's original triangle had the "
+                "cystic artery as upper border; the hepatocystic triangle is the modern, "
+                "larger version)",
             ],
             "function": [
                 "Stores and concentrates bile; contracts under cholecystokinin after a "
@@ -433,7 +439,7 @@ TEXTS: dict[str, StructureText] = {
     ),
     "N": StructureText(
         name="Pancreas",
-        kind="Mixed (exocrine and endocrine) gland, retroperitoneal",
+        kind="Mixed (exocrine and endocrine) gland, retroperitoneal (except the tail)",
         region="Supramesocolic compartment, behind the stomach, at the level of L1-L2",
         count="1",
         description=(
@@ -550,8 +556,8 @@ TEXTS: dict[str, StructureText] = {
             "parts": [
                 "Ileocaecal valve (Bauhin's valve) at the opening of the ileum",
                 "Base of the appendix 2-3 cm below the valve, where the three taeniae converge",
-                "Variable position of the appendix: retrocaecal (the most frequent), "
-                "pelvic, subcaecal, preileal or postileal",
+                "Variable position of the appendix: retrocaecal (most frequent in most "
+                "series), pelvic, subcaecal, preileal, postileal",
                 "Mesoappendix containing the appendicular artery",
             ],
             "relations": [
@@ -678,7 +684,8 @@ TEXTS: dict[str, StructureText] = {
         description=(
             "Segment about 25 cm long, narrower than the right colon, that runs down "
             "from the left colic flexure to the left iliac crest, where it becomes "
-            "the sigmoid colon. It is fixed by the left Toldt's fascia."
+            "the sigmoid colon (the boundary varies between authors: iliac crest or "
+            "pelvic brim). It is fixed by the left Toldt's fascia."
         ),
         sections={
             "parts": [
@@ -720,8 +727,8 @@ TEXTS: dict[str, StructureText] = {
         count="1",
         description=(
             "Mobile loop of very variable length (about 40 cm), suspended by the "
-            "sigmoid mesocolon, from the left iliac crest to the rectosigmoid "
-            "junction (S3)."
+            "sigmoid mesocolon, from the left iliac crest (the boundary varies between "
+            "authors: iliac crest or pelvic brim) to the rectosigmoid junction (S3)."
         ),
         sections={
             "parts": [

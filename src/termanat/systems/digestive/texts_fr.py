@@ -139,7 +139,8 @@ TEXTS: dict[str, StructureText] = {
             ],
             "function": [
                 "Temps pharyngé, réflexe, de la déglutition : fermeture du nasopharynx "
-                "par le voile et protection du larynx par l'épiglotte",
+                "par le voile ; protection des voies aériennes par l'ascension et la "
+                "fermeture du larynx, et la bascule de l'épiglotte",
                 "Passage de l'air ; résonance de la voix ; anneau lymphatique pharyngé "
                 "(de Waldeyer)",
             ],
@@ -149,13 +150,15 @@ TEXTS: dict[str, StructureText] = {
             ],
             "innervation": [
                 "Plexus pharyngien : nerf glosso-pharyngien (IX, sensitif) et nerf vague "
-                "(X, moteur des constricteurs) ; le stylo-pharyngien est innervé par le IX",
+                "(X, moteur des constricteurs) ; le stylo-pharyngien est innervé par le IX (sensibilité : "
+                "nasopharynx par le V2, laryngopharynx par le X)",
             ],
             "clinical": [
                 "Réflexe nauséeux : afférence par le IX, efférence par le X",
                 "Diverticule pharyngo-œsophagien (de Zenker), en arrière, au-dessus du "
                 "muscle crico-pharyngien",
-                "Corps étrangers (arêtes) bloqués dans les récessus piriformes",
+                "Corps étrangers (arêtes) bloqués dans les tonsilles palatines, les "
+                "vallécules ou les récessus piriformes",
             ],
         },
         fact="Le pharynx est le seul segment partagé par l'air et les aliments.",
@@ -291,8 +294,9 @@ TEXTS: dict[str, StructureText] = {
                 "vaisseaux mésentériques supérieurs en avant",
                 "D4, partie ascendante : jusqu'à l'angle duodéno-jéjunal (L2), suspendu "
                 "par le muscle suspenseur du duodénum (de Treitz)",
-                "Papille majeure (ampoule hépato-pancréatique, de Vater) : cholédoque et "
-                "conduit pancréatique principal, entourés du sphincter d'Oddi",
+                "Papille duodénale majeure : débouché de l'ampoule hépato-pancréatique "
+                "(de Vater), où s'unissent cholédoque et conduit pancréatique principal ; "
+                "sphincter de l'ampoule (d'Oddi)",
                 "Papille mineure, au-dessus : conduit pancréatique accessoire",
             ],
             "relations": [
@@ -327,7 +331,7 @@ TEXTS: dict[str, StructureText] = {
         },
         fact=(
             "L'angle duodéno-jéjunal sépare les hémorragies digestives hautes (en "
-            "amont) des basses (en aval)."
+            "amont) des basses (en aval), selon la définition classique."
         ),
     ),
     "L": StructureText(
@@ -347,8 +351,8 @@ TEXTS: dict[str, StructureText] = {
                 "et caudé à la face viscérale",
                 "Segmentation de Couinaud : 8 segments (I à VIII), chacun avec son "
                 "pédicule portal ; le segment I (lobe caudé) est autonome",
-                "Foie droit (V à VIII) et foie gauche (II à IV) séparés par la fissure "
-                "portale principale (ligne de Cantlie, veine hépatique moyenne)",
+                "Foie droit (V à VIII) et foie gauche (II à IV) séparés par la scissure "
+                "(fissure) portale principale (ligne de Cantlie, veine hépatique moyenne)",
                 "Pédicule hépatique (bord libre du petit omentum) : veine porte en "
                 "arrière, artère hépatique propre en avant à gauche, cholédoque en avant "
                 "à droite",
@@ -404,8 +408,8 @@ TEXTS: dict[str, StructureText] = {
         ),
         sections={
             "parts": [
-                "Vésicule : fond, corps, col (infundibulum) puis conduit cystique, à "
-                "plis spiraux (valvules de Heister)",
+                "Vésicule : fond, corps, infundibulum puis col (poche de Hartmann), puis "
+                "conduit cystique à plis spiraux (valvules de Heister)",
                 "Conduits hépatiques droit et gauche, réunis en conduit hépatique commun",
                 "Conduit hépatique commun et conduit cystique forment le conduit "
                 "cholédoque",
@@ -417,7 +421,9 @@ TEXTS: dict[str, StructureText] = {
                 "médio-claviculaire",
                 "Corps et col au contact de D1 et de l'angle colique droit",
                 "Triangle hépato-cystique (de Calot) : conduit cystique, conduit hépatique "
-                "commun et foie ; il contient l'artère cystique",
+                "commun et foie ; il contient l'artère cystique (le triangle original de Calot "
+                "avait l'artère cystique pour bord supérieur ; le triangle "
+                "hépato-cystique en est la version moderne, plus grande)",
             ],
             "function": [
                 "Stockage et concentration de la bile ; contraction sous l'effet de la "
@@ -449,7 +455,7 @@ TEXTS: dict[str, StructureText] = {
     ),
     "N": StructureText(
         name="Pancréas",
-        kind="Glande mixte (exocrine et endocrine), rétropéritonéale",
+        kind="Glande mixte (exocrine et endocrine), rétropéritonéale (sauf la queue)",
         region="Étage sus-mésocolique, en arrière de l'estomac, en regard de L1-L2",
         count="1",
         description=(
@@ -573,8 +579,9 @@ TEXTS: dict[str, StructureText] = {
                 "Valve iléo-cæcale (de Bauhin) à l'abouchement de l'iléum",
                 "Base de l'appendice à 2-3 cm sous la valve, à la convergence des trois "
                 "ténias",
-                "Position de l'appendice variable : rétro-cæcale (la plus fréquente), "
-                "pelvienne, sous-cæcale, méso-cœliaque",
+                "Position de l'appendice variable : rétro-cæcale (la plus fréquente selon "
+                "la plupart des séries), pelvienne, sous-cæcale, pré-iléale, rétro-iléale "
+                "(méso-cœliaque)",
                 "Méso-appendice contenant l'artère appendiculaire",
             ],
             "relations": [
@@ -702,7 +709,8 @@ TEXTS: dict[str, StructureText] = {
         description=(
             "Segment d'environ 25 cm, plus étroit que le côlon droit, qui descend de "
             "l'angle colique gauche à la crête iliaque gauche, où il devient le côlon "
-            "sigmoïde. Il est accolé par le fascia de Toldt gauche."
+            "sigmoïde (limite variable selon les auteurs : crête iliaque ou détroit "
+            "supérieur). Il est accolé par le fascia de Toldt gauche."
         ),
         sections={
             "parts": [
@@ -744,7 +752,8 @@ TEXTS: dict[str, StructureText] = {
         count="1",
         description=(
             "Anse mobile de longueur très variable (environ 40 cm), suspendue par le "
-            "mésocôlon sigmoïde, de la crête iliaque gauche à la jonction "
+            "mésocôlon sigmoïde, de la crête iliaque gauche (limite variable selon les "
+            "auteurs : crête iliaque ou détroit supérieur) à la jonction "
             "recto-sigmoïdienne (S3)."
         ),
         sections={
@@ -801,7 +810,7 @@ TEXTS: dict[str, StructureText] = {
                 "volontaire)",
             ],
             "relations": [
-                "Chez l'homme : vessie, vésicules séminales, prostate ; cul-de-sac "
+                "Chez l'homme : vessie, glandes séminales (vésicules séminales), prostate ; cul-de-sac "
                 "recto-vésical",
                 "Chez la femme : utérus et vagin ; cul-de-sac recto-utérin (de Douglas), "
                 "point le plus bas de la cavité péritonéale",

@@ -17,7 +17,7 @@ _ORDER = [
     ("S", "Gaster"),
     ("D", "Duodenum"),
     ("L", "Hepar"),
-    ("G", "Vesica biliaris et ductus biliferi"),
+    ("G", "Vesica biliaris et ductus biliares extrahepatici"),
     ("N", "Pancreas"),
     ("J", "Jejunum et ileum"),
     ("C", "Caecum et appendix vermiformis"),
