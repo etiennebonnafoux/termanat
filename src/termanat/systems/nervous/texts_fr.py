@@ -10,7 +10,7 @@ TEXTS: dict[str, StructureText] = {
     "B": StructureText(
         name="Cerveau (hémisphères cérébraux)",
         kind="Système nerveux central : télencéphale",
-        region="Tête, étages antérieur et moyen de la cavité crânienne",
+        region="Loge supratentorielle de la cavité crânienne",
         count="2 hémisphères",
         description=(
             "Partie la plus volumineuse de l'encéphale, formée de deux hémisphères "
@@ -72,8 +72,8 @@ TEXTS: dict[str, StructureText] = {
                 "Vascularisé par les artères cérébelleuses supérieure, antéro-inférieure et postéro-inférieure",
             ],
             "function": [
-                "Équilibre (archéocervelet, lobe flocculo-nodulaire, lié au système vestibulaire)",
-                "Tonus et posture (paléocervelet) ; coordination fine des mouvements (néocervelet)",
+                "Équilibre : archéocervelet (lobe flocculo-nodulaire), ou vestibulocervelet, lié au système vestibulaire",
+                "Tonus et posture : paléocervelet (spinocervelet) ; coordination fine : néocervelet (cérébrocervelet)",
                 "Apprentissage moteur ; il agit du même côté du corps (contrôle homolatéral)",
             ],
             "clinical": [
@@ -107,7 +107,7 @@ TEXTS: dict[str, StructureText] = {
             ],
             "function": [
                 "Passage des voies ascendantes (sensibilité) et descendantes (voie pyramidale)",
-                "Noyaux des nerfs crâniens III à XII",
+                "Noyaux des nerfs crâniens III à XII (le noyau du XI spinal est dans la moelle cervicale)",
                 "Centres vitaux de la moelle allongée : respiration, rythme cardiaque, pression artérielle",
                 "Formation réticulée : éveil et vigilance",
             ],
@@ -141,7 +141,7 @@ TEXTS: dict[str, StructureText] = {
                 "Corne postérieure sensitive, corne antérieure motrice, corne latérale "
                 "sympathique (T1-L2)",
                 "Substance blanche en cordons postérieur, latéral et antérieur (faisceaux de fibres)",
-                "Intumescences cervicale (membres supérieurs) et lombale (membres inférieurs)",
+                "Intumescences cervicale (membres supérieurs) et lombo-sacrale (membres inférieurs)",
             ],
             "landmarks": [
                 "Chez l'adulte, le cône médullaire se termine en regard du disque L1-L2",
@@ -175,7 +175,7 @@ TEXTS: dict[str, StructureText] = {
         description=(
             "Faisceau des racines lombales, sacrales et coccygienne qui descendent "
             "dans le sac dural sous la fin de la moelle avant de sortir par leurs "
-            "foramens intervertébraux. Le filum terminal est au centre."
+            "foramens intervertébraux et sacraux. Le filum terminal est au centre."
         ),
         sections={
             "parts": [
@@ -189,7 +189,7 @@ TEXTS: dict[str, StructureText] = {
                 "En arrière : lames et ligaments jaunes, voie d'abord de la ponction lombale",
             ],
             "clinical": [
-                "Ponction lombale sans danger à ce niveau : les racines flottantes "
+                "Ponction lombale à faible risque à ce niveau : les racines flottantes "
                 "s'écartent de l'aiguille",
                 "Syndrome de la queue de cheval (grosse hernie discale) : anesthésie "
                 "en selle, troubles sphinctériens, déficit des membres inférieurs",
@@ -215,7 +215,7 @@ TEXTS: dict[str, StructureText] = {
         ),
         sections={
             "course": [
-                "Sort du crâne par le foramen jugulaire, avec les nerfs IX et XI",
+                "Sort du crâne par le foramen jugulaire (ancien : trou déchiré postérieur), avec les nerfs IX et XI",
                 "Descend dans la gaine carotidienne, en arrière, entre veine jugulaire "
                 "interne et artère carotide",
                 "Passe en arrière du pédicule pulmonaire puis forme le plexus œsophagien",
@@ -249,7 +249,7 @@ TEXTS: dict[str, StructureText] = {
         fact=(
             "Le nerf laryngé récurrent gauche descend jusque sous l'arc aortique "
             "avant de remonter au larynx : un détour hérité du développement des arcs "
-            "branchiaux."
+            "pharyngiens (anciennement branchiaux)."
         ),
     ),
     "P": StructureText(
@@ -278,7 +278,7 @@ TEXTS: dict[str, StructureText] = {
                 "Contraction du diaphragme à chaque inspiration",
             ],
             "clinical": [
-                "Lésion médullaire au-dessus de C3 : paralysie respiratoire, ventilation mécanique nécessaire",
+                "Lésion médullaire haute (C3 ou au-dessus) : paralysie respiratoire, ventilation mécanique nécessaire",
                 "Paralysie phrénique : coupole diaphragmatique ascensionnée sur la radiographie",
                 "Douleur projetée à l'épaule (dermatome C4) lors d'une irritation du diaphragme",
             ],
@@ -308,8 +308,9 @@ TEXTS: dict[str, StructureText] = {
             ],
             "branches": [
                 "Faisceau latéral : nerf musculo-cutané et racine latérale du nerf médian",
-                "Faisceau médial : nerf ulnaire, racine médiale du médian, nerfs cutanés médiaux du bras et de l'avant-bras",
-                "Faisceau postérieur : nerf axillaire et nerf radial",
+                "Faisceau médial : nerf ulnaire, racine médiale du médian, nerfs cutanés médiaux du bras et de l'avant-bras "
+                "(anciens : accessoire du brachial cutané interne, brachial cutané interne)",
+                "Faisceau postérieur : nerf axillaire (ancien : nerf circonflexe) et nerf radial",
                 "Branches collatérales, dont le nerf thoracique long (C5-C7) du muscle dentelé antérieur",
             ],
             "clinical": [
@@ -384,7 +385,8 @@ TEXTS: dict[str, StructureText] = {
             ],
             "clinical": [
                 "Fracture de la diaphyse humérale : atteinte du nerf dans son sillon",
-                "Main tombante « en col de cygne » : impossible d'étendre le poignet et les doigts",
+                "Main tombante « en col de cygne » (sans rapport avec la déformation des doigts de même nom "
+                "de la polyarthrite) : impossible d'étendre le poignet et les doigts",
                 "Compression axillaire (béquilles) : le triceps est alors aussi paralysé",
             ],
         },
@@ -418,8 +420,8 @@ TEXTS: dict[str, StructureText] = {
             "territory": [
                 "Moteur : muscles antérieurs de l'avant-bras, sauf fléchisseur ulnaire du "
                 "carpe et moitié médiale du fléchisseur profond",
-                "Moteur : muscles thénariens (sauf adducteur du pouce) et deux premiers lombricaux",
-                "Sensitif : face palmaire des 3 premiers doigts et demi, et pulpe dorsale de ces doigts",
+                "Moteur : muscles thénariens (sauf adducteur du pouce et chef profond du court fléchisseur du pouce) et deux premiers lombricaux",
+                "Sensitif : face palmaire des 3 premiers doigts et demi, et face dorsale des deux dernières phalanges de ces doigts",
             ],
             "clinical": [
                 "Syndrome du canal carpien : paresthésies nocturnes des 3 premiers doigts, "
@@ -523,8 +525,9 @@ TEXTS: dict[str, StructureText] = {
         ),
         sections={
             "parts": [
-                "Plexus lombal : nerfs ilio-hypogastrique, ilio-inguinal, génito-fémoral",
-                "Plexus lombal : nerf cutané latéral de la cuisse, nerf obturateur, nerf fémoral",
+                "Plexus lombal : nerfs ilio-hypogastrique et ilio-inguinal (anciens : grand et petit "
+                "abdomino-génitaux), génito-fémoral (ancien : génito-crural)",
+                "Plexus lombal : nerf cutané latéral de la cuisse (ancien : fémoro-cutané), nerf obturateur, nerf fémoral",
             ],
             "course": [
                 "Émerge du bord latéral du grand psoas et descend entre psoas et iliaque",
@@ -564,7 +567,8 @@ TEXTS: dict[str, StructureText] = {
         sections={
             "parts": [
                 "Plexus sacral : tronc lombo-sacral (L4-L5) et rameaux antérieurs S1 à S3, devant le piriforme",
-                "Autres branches : nerfs glutéaux supérieur et inférieur, cutané postérieur de la cuisse, pudendal",
+                "Autres branches : nerfs glutéaux et cutané postérieur de la cuisse ; le nerf pudendal (S2-S4) est "
+                "rattaché à un plexus pudendal distinct dans la tradition française",
             ],
             "course": [
                 "Sort du bassin par le grand foramen ischiatique, sous le muscle piriforme",
@@ -603,7 +607,8 @@ TEXTS: dict[str, StructureText] = {
         sections={
             "course": [
                 "Descend au milieu de la fosse poplitée, en superficie par rapport aux vaisseaux poplités",
-                "Passe sous l'arcade du soléaire et descend avec l'artère tibiale postérieure",
+                "Passe sous l'arcade du soléaire (segment autrefois appelé nerf tibial postérieur) "
+                "et descend avec l'artère tibiale postérieure",
                 "Passe en arrière de la malléole médiale, dans le canal tarsien",
                 "Se divise en nerfs plantaires médial et latéral",
             ],

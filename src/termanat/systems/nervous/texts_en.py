@@ -8,7 +8,7 @@ TEXTS: dict[str, StructureText] = {
     "B": StructureText(
         name="Cerebrum (cerebral hemispheres)",
         kind="Central nervous system: telencephalon",
-        region="Head, anterior and middle cranial fossae",
+        region="Supratentorial compartment of the cranial cavity",
         count="2 hemispheres",
         description=(
             "Largest part of the brain, made of two hemispheres separated by the "
@@ -69,8 +69,8 @@ TEXTS: dict[str, StructureText] = {
                 "Supplied by the superior, anterior inferior and posterior inferior cerebellar arteries",
             ],
             "function": [
-                "Balance (archicerebellum, flocculonodular lobe, linked to the vestibular system)",
-                "Tone and posture (paleocerebellum); fine coordination of movement (neocerebellum)",
+                "Balance: archicerebellum (flocculonodular lobe), or vestibulocerebellum, linked to the vestibular system",
+                "Tone and posture: paleocerebellum (spinocerebellum); fine coordination: neocerebellum (cerebrocerebellum)",
                 "Motor learning; it acts on the same side of the body (ipsilateral control)",
             ],
             "clinical": [
@@ -104,7 +104,7 @@ TEXTS: dict[str, StructureText] = {
             ],
             "function": [
                 "Passage of ascending (sensory) and descending (pyramidal) pathways",
-                "Nuclei of cranial nerves III to XII",
+                "Nuclei of cranial nerves III to XII (the nucleus of the spinal accessory lies in the cervical cord)",
                 "Vital centres of the medulla oblongata: breathing, heart rate, blood pressure",
                 "Reticular formation: arousal and wakefulness",
             ],
@@ -126,7 +126,6 @@ TEXTS: dict[str, StructureText] = {
         kind="Central nervous system",
         region="Vertebral canal, from the foramen magnum to the L1-L2 vertebra",
         count="1 (unpaired, midline), 31 pairs of spinal nerves",
-        old_names=["medulla spinalis"],
         description=(
             "Nerve cord about 45 cm long, wrapped in the meninges (dura mater, "
             "arachnoid, pia mater). It continues the medulla oblongata and ends as "
@@ -170,7 +169,7 @@ TEXTS: dict[str, StructureText] = {
         description=(
             "Bundle of lumbar, sacral and coccygeal roots running down in the dural "
             "sac below the end of the cord before leaving through their "
-            "intervertebral foramina. The filum terminale lies in the middle."
+            "intervertebral and sacral foramina. The filum terminale lies in the middle."
         ),
         sections={
             "parts": [
@@ -183,7 +182,7 @@ TEXTS: dict[str, StructureText] = {
                 "Behind: laminae and ligamenta flava, the route of a lumbar puncture",
             ],
             "clinical": [
-                "Lumbar puncture is safe at this level: the floating roots move away from the needle",
+                "Lumbar puncture is low-risk at this level: the floating roots move away from the needle",
                 "Cauda equina syndrome (large disc herniation): saddle anaesthesia, "
                 "sphincter disorders, lower limb weakness",
                 "It is a surgical emergency; the deficit is of peripheral type (flaccid "
@@ -271,7 +270,7 @@ TEXTS: dict[str, StructureText] = {
                 "Contraction of the diaphragm at each inspiration",
             ],
             "clinical": [
-                "Spinal cord injury above C3: respiratory paralysis, mechanical ventilation needed",
+                "Spinal cord injury at or above C3: respiratory paralysis, mechanical ventilation needed",
                 "Phrenic palsy: raised hemidiaphragm on the chest X-ray",
                 "Pain referred to the shoulder (C4 dermatome) when the diaphragm is irritated",
             ],
@@ -372,7 +371,8 @@ TEXTS: dict[str, StructureText] = {
             ],
             "clinical": [
                 "Humeral shaft fracture: the nerve is injured in its groove",
-                "Wrist drop: the wrist and fingers cannot be extended",
+                "Wrist drop (French 'swan neck' hand, unrelated to the rheumatoid finger deformity): "
+                "the wrist and fingers cannot be extended",
                 "Compression in the axilla (crutches): triceps is then also paralysed",
             ],
         },
@@ -406,8 +406,8 @@ TEXTS: dict[str, StructureText] = {
             "territory": [
                 "Motor: anterior forearm muscles, except flexor carpi ulnaris and the "
                 "medial half of flexor digitorum profundus",
-                "Motor: thenar muscles (except adductor pollicis) and the first two lumbricals",
-                "Sensory: palmar side of the lateral three and a half digits, and the dorsal tips of those digits",
+                "Motor: thenar muscles (except adductor pollicis and the deep head of flexor pollicis brevis) and the first two lumbricals",
+                "Sensory: palmar side of the lateral three and a half digits, and the dorsal side of the middle and distal phalanges of those digits",
             ],
             "clinical": [
                 "Carpal tunnel syndrome: night-time tingling in the lateral three "
@@ -554,7 +554,8 @@ TEXTS: dict[str, StructureText] = {
         sections={
             "parts": [
                 "Sacral plexus: lumbosacral trunk (L4-L5) and anterior rami S1 to S3, in front of piriformis",
-                "Other branches: superior and inferior gluteal, posterior cutaneous nerve of the thigh, pudendal",
+                "Other branches: gluteal nerves and posterior cutaneous nerve of the thigh; the pudendal nerve (S2-S4) "
+                "is assigned to a separate pudendal plexus in French tradition",
             ],
             "course": [
                 "Leaves the pelvis through the greater sciatic foramen, below piriformis",
@@ -591,7 +592,8 @@ TEXTS: dict[str, StructureText] = {
         sections={
             "course": [
                 "Runs down the middle of the popliteal fossa, superficial to the popliteal vessels",
-                "Passes under the tendinous arch of soleus and runs with the posterior tibial artery",
+                "Passes under the tendinous arch of soleus (segment formerly called the posterior tibial nerve) "
+                "and runs with the posterior tibial artery",
                 "Passes behind the medial malleolus, in the tarsal tunnel",
                 "Divides into medial and lateral plantar nerves",
             ],
