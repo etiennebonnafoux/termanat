@@ -101,7 +101,7 @@ TEXTS: dict[str, StructureText] = {
         },
         fact=(
             "Les deux trapèzes réunis dessinent un losange que l'on appelait autrefois "
-            "le « capuchon de moine »."
+            "le « capuchon de moine » (muscle cucullaire)."
         ),
     ),
     "D": StructureText(
@@ -126,8 +126,8 @@ TEXTS: dict[str, StructureText] = {
                 "latérale de l'humérus",
             ],
             "action": [
-                "Abducteur principal du bras, surtout entre 15° et 90°, après "
-                "l'initiation du mouvement par le muscle supra-épineux",
+                "Abducteur principal du bras, surtout entre 15° et 90°, le "
+                "supra-épineux l'assistant surtout en début de mouvement",
                 "Faisceau antérieur : flexion et rotation médiale du bras",
                 "Faisceau postérieur : extension et rotation latérale du bras",
                 "Au-delà de 90°, l'élévation nécessite la bascule de la scapula "
@@ -144,15 +144,15 @@ TEXTS: dict[str, StructureText] = {
             "clinical": [
                 "Luxation antéro-inférieure de l'épaule ou fracture du col chirurgical "
                 "de l'humérus : risque de lésion du nerf axillaire",
-                "Paralysie axillaire : abduction impossible et anesthésie du moignon de "
-                "l'épaule (zone de l'« insigne de caporal »)",
+                "Paralysie axillaire : abduction très affaiblie et hypoesthésie du "
+                "moignon de l'épaule (en épaulette)",
                 "Site classique des injections intramusculaires (vaccins), dans sa "
                 "partie haute pour éviter le nerf axillaire",
             ],
         },
         fact=(
-            "Son nom vient de la lettre grecque delta (Δ) : renversé, le muscle a la "
-            "forme d'un triangle."
+            "Son nom vient de la lettre grecque delta (Δ) : le muscle a la forme d'un "
+            "delta renversé."
         ),
     ),
     "P": StructureText(
@@ -169,7 +169,7 @@ TEXTS: dict[str, StructureText] = {
             "parts": [
                 "Chef claviculaire",
                 "Chef sterno-costal",
-                "Chef abdominal (inconstant, petit)",
+                "Partie abdominale (petite, variable)",
             ],
             "insertions": [
                 "Origine : moitié médiale de la clavicule, face antérieure du sternum, "
@@ -280,7 +280,7 @@ TEXTS: dict[str, StructureText] = {
             "clinical": [
                 "Réflexe bicipital : explore les racines C5-C6",
                 "Rupture du tendon du chef long : le ventre musculaire se rétracte en "
-                "boule au milieu du bras (signe de Popeye)",
+                "boule dans la moitié inférieure du bras (signe de Popeye)",
                 "L'aponévrose bicipitale recouvre l'artère brachiale et le nerf médian au "
                 "pli du coude",
             ],
@@ -325,7 +325,8 @@ TEXTS: dict[str, StructureText] = {
             ],
         },
         fact=(
-            "On l'appelle parfois le « muscle du verre » : il plie le coude quand on "
+            "On l'appelle parfois le « muscle du buveur de bière » : il plie le coude "
+            "quand on "
             "porte un verre à la bouche, pouce en haut."
         ),
     ),
@@ -342,11 +343,11 @@ TEXTS: dict[str, StructureText] = {
         ),
         sections={
             "parts": [
-                "Muscle rond pronateur",
+                "Muscle rond pronateur (pronateur, non fléchisseur, mais classé dans ce groupe)",
                 "Muscle fléchisseur radial du carpe (ancien grand palmaire)",
                 "Muscle long palmaire (ancien petit palmaire), inconstant",
                 "Muscle fléchisseur ulnaire du carpe (ancien cubital antérieur)",
-                "Muscle fléchisseur superficiel des doigts",
+                "Muscle fléchisseur superficiel des doigts (plan intermédiaire)",
             ],
             "insertions": [
                 "Origine commune : épicondyle médial de l'humérus (tendon commun des "
@@ -366,13 +367,15 @@ TEXTS: dict[str, StructureText] = {
             ],
             "innervation": [
                 "Nerf médian (C6-T1) pour tous ces muscles",
-                "Sauf le fléchisseur ulnaire du carpe : nerf ulnaire (C8-T1)",
+                "Sauf le fléchisseur ulnaire du carpe : nerf ulnaire (C8-T1, ou C7-C8 selon "
+                "les auteurs)",
             ],
             "vascularisation": [
                 "Branches des artères ulnaire et radiale",
             ],
             "clinical": [
-                "Épicondylite médiale (« épicondylite du golfeur ») : tendinopathie du "
+                "Épicondylite médiale (ancienne épitrochléite, « coude du golfeur ») : "
+                "tendinopathie du "
                 "tendon commun",
                 "Le long palmaire, absent chez environ 15 % des sujets, sert de greffon "
                 "tendineux",
@@ -423,8 +426,8 @@ TEXTS: dict[str, StructureText] = {
             ],
         },
         fact=(
-            "Les intersections tendineuses sont les restes de la segmentation "
-            "embryonnaire du muscle en myotomes."
+            "Les intersections tendineuses témoigneraient de l'origine métamérique du "
+            "muscle (myotomes embryonnaires)."
         ),
     ),
     "O": StructureText(
@@ -503,9 +506,11 @@ TEXTS: dict[str, StructureText] = {
                 "Branches musculaires de l'artère fémorale, artère descendante du genou",
             ],
             "clinical": [
-                "Bord latéral du trigone fémoral (ligament inguinal en haut, long "
+                "Bord latéral du trigone fémoral (ancien triangle de Scarpa ; ligament "
+                "inguinal en haut, long "
                 "adducteur en dedans) qui contient nerf, artère et veine fémoraux",
-                "Recouvre le canal des adducteurs, traversé par l'artère et la veine "
+                "Recouvre le canal des adducteurs (ancien canal de Hunter), traversé par "
+                "l'artère et la veine "
                 "fémorales",
                 "Arrachement de l'épine iliaque antéro-supérieure chez l'adolescent sportif",
             ],
@@ -587,7 +592,8 @@ TEXTS: dict[str, StructureText] = {
                 "Muscle gracile (ancien droit interne)",
             ],
             "insertions": [
-                "Origine : corps et branche inférieure du pubis, branche de l'ischium, "
+                "Origine : pecten du pubis (pectiné), corps et branche inférieure du pubis, "
+                "branche de l'ischium, "
                 "tubérosité ischiatique (grand adducteur)",
                 "Terminaison : ligne pectinée et lèvre médiale de la ligne âpre du fémur, "
                 "tubercule de l'adducteur (grand adducteur)",
@@ -610,9 +616,10 @@ TEXTS: dict[str, StructureText] = {
                 "artère circonflexe fémorale médiale",
             ],
             "clinical": [
-                "Le long adducteur forme le bord médial du trigone fémoral",
-                "Hiatus du grand adducteur : les vaisseaux fémoraux y deviennent "
-                "poplités",
+                "Le long adducteur forme le bord médial du trigone fémoral (ancien triangle "
+                "de Scarpa)",
+                "Hiatus du grand adducteur, à la sortie du canal des adducteurs (ancien canal "
+                "de Hunter) : les vaisseaux fémoraux y deviennent poplités",
                 "Pubalgie et lésions des adducteurs, fréquentes chez les footballeurs",
                 "Le tendon du gracile sert de greffon pour reconstruire le ligament "
                 "croisé antérieur (technique DIDT)",
@@ -656,7 +663,7 @@ TEXTS: dict[str, StructureText] = {
             "clinical": [
                 "Lésion du nerf fibulaire commun au col de la fibula (plâtre, fracture, "
                 "jambes croisées) : pied tombant et marche en steppage",
-                "Syndrome des loges antérieur de la jambe : urgence chirurgicale "
+                "Syndrome de la loge antérieure de la jambe : urgence chirurgicale "
                 "(aponévrotomie)",
                 "Déficit des releveurs : marche sur les talons impossible (racines L4-L5)",
             ],
@@ -710,7 +717,6 @@ TEXTS: dict[str, StructureText] = {
     ),
     "C": StructureText(
         name="Muscle triceps sural",
-        old_names=["jumeaux (muscles gastrocnémiens)"],
         kind=_KIND,
         region="Jambe, loge postérieure (mollet), visible de face en dedans",
         count="2 (pair), à trois chefs",
@@ -721,7 +727,8 @@ TEXTS: dict[str, StructureText] = {
         ),
         sections={
             "parts": [
-                "Muscle gastrocnémien, chefs médial et latéral, superficiels et "
+                "Muscle gastrocnémien (ancien muscle jumeaux), chefs médial et latéral, "
+                "superficiels et "
                 "biarticulaires",
                 "Muscle soléaire, profond, monoarticulaire",
             ],

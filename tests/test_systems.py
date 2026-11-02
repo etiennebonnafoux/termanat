@@ -7,9 +7,7 @@ EXPECTED = ["skeleton", "muscles", "digestive", "circulatory", "nervous"]
 
 
 def test_all_systems_are_registered_in_order():
-    # TEMPORARY while the new systems are being written: only check the order.
-    ids = [s.id for s in SYSTEMS]
-    assert ids == [i for i in EXPECTED if i in ids] and ids[0] == "skeleton"
+    assert [s.id for s in SYSTEMS] == EXPECTED
 
 
 @pytest.mark.parametrize("system", SYSTEMS, ids=lambda s: s.id)

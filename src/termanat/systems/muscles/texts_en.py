@@ -123,8 +123,8 @@ TEXTS: dict[str, StructureText] = {
                 "Insertion: deltoid tuberosity on the lateral surface of the humerus",
             ],
             "action": [
-                "Main abductor of the arm, mostly between 15° and 90°, after the movement "
-                "is started by the supraspinatus",
+                "Main abductor of the arm, mostly between 15° and 90°, assisted by "
+                "supraspinatus especially at the start",
                 "Anterior part: flexion and medial rotation of the arm",
                 "Posterior part: extension and lateral rotation of the arm",
                 "Above 90°, elevation requires rotation of the scapula (trapezius, "
@@ -141,15 +141,15 @@ TEXTS: dict[str, StructureText] = {
             "clinical": [
                 "Anteroinferior shoulder dislocation or fracture of the surgical neck of "
                 "the humerus: risk of axillary nerve injury",
-                "Axillary nerve palsy: abduction impossible and numbness over the "
-                "shoulder (\"regimental badge\" area)",
+                "Axillary nerve palsy: abduction severely weakened and reduced sensation "
+                "over the shoulder (epaulette area)",
                 "Classic site for intramuscular injections (vaccines), in its upper part "
                 "to avoid the axillary nerve",
             ],
         },
         fact=(
-            "Its name comes from the Greek letter delta (Δ): upside down, the muscle is "
-            "shaped like a triangle."
+            "Its name comes from the Greek letter delta (Δ): the muscle is shaped like "
+            "an upside-down delta."
         ),
     ),
     "P": StructureText(
@@ -166,7 +166,7 @@ TEXTS: dict[str, StructureText] = {
             "parts": [
                 "Clavicular head",
                 "Sternocostal head",
-                "Abdominal head (inconstant, small)",
+                "Abdominal part (small, variable)",
             ],
             "insertions": [
                 "Origin: medial half of the clavicle, anterior surface of the sternum, "
@@ -278,7 +278,7 @@ TEXTS: dict[str, StructureText] = {
             "clinical": [
                 "Biceps reflex: tests the C5-C6 roots",
                 "Rupture of the long head tendon: the belly retracts into a lump in the "
-                "middle of the arm (Popeye sign)",
+                "lower half of the arm (Popeye sign)",
                 "The bicipital aponeurosis covers the brachial artery and median nerve "
                 "at the elbow crease",
             ],
@@ -339,11 +339,11 @@ TEXTS: dict[str, StructureText] = {
         ),
         sections={
             "parts": [
-                "Pronator teres",
+                "Pronator teres (a pronator, not a flexor, but classed in this group)",
                 "Flexor carpi radialis",
                 "Palmaris longus, inconstant",
                 "Flexor carpi ulnaris",
-                "Flexor digitorum superficialis",
+                "Flexor digitorum superficialis (intermediate layer)",
             ],
             "insertions": [
                 "Common origin: medial epicondyle of the humerus (common flexor tendon)",
@@ -362,7 +362,8 @@ TEXTS: dict[str, StructureText] = {
             ],
             "innervation": [
                 "Median nerve (C6-T1) for all of these muscles",
-                "Except flexor carpi ulnaris: ulnar nerve (C8-T1)",
+                "Except flexor carpi ulnaris: ulnar nerve (C8-T1, or C7-C8 according to "
+                "textbooks)",
             ],
             "vascularisation": [
                 "Branches of the ulnar and radial arteries",
@@ -414,8 +415,8 @@ TEXTS: dict[str, StructureText] = {
             ],
         },
         fact=(
-            "The tendinous intersections are remnants of the embryonic segmentation of "
-            "the muscle into myotomes."
+            "The tendinous intersections are thought to reflect the muscle's segmental "
+            "origin (embryonic myotomes)."
         ),
     ),
     "O": StructureText(
@@ -492,9 +493,11 @@ TEXTS: dict[str, StructureText] = {
                 "Muscular branches of the femoral artery, descending genicular artery",
             ],
             "clinical": [
-                "Lateral border of the femoral triangle (inguinal ligament above, "
+                "Lateral border of the femoral triangle (Scarpa's triangle; inguinal "
+                "ligament above, "
                 "adductor longus medially), which contains the femoral nerve, artery and vein",
-                "Covers the adductor canal, through which the femoral artery and vein run",
+                "Covers the adductor canal (Hunter's canal), through which the femoral "
+                "artery and vein run",
                 "Avulsion of the anterior superior iliac spine in adolescent athletes",
             ],
         },
@@ -573,7 +576,8 @@ TEXTS: dict[str, StructureText] = {
                 "Gracilis",
             ],
             "insertions": [
-                "Origin: body and inferior ramus of the pubis, ramus of the ischium, "
+                "Origin: pecten pubis (pectineus), body and inferior ramus of the pubis, "
+                "ramus of the ischium, "
                 "ischial tuberosity (adductor magnus)",
                 "Insertion: pectineal line and medial lip of the linea aspera of the "
                 "femur, adductor tubercle (adductor magnus)",
@@ -594,8 +598,10 @@ TEXTS: dict[str, StructureText] = {
                 "circumflex femoral artery",
             ],
             "clinical": [
-                "Adductor longus forms the medial border of the femoral triangle",
-                "Adductor hiatus: the femoral vessels become the popliteal vessels there",
+                "Adductor longus forms the medial border of the femoral triangle (Scarpa's "
+                "triangle)",
+                "Adductor hiatus, at the exit of the adductor canal (Hunter's canal): the "
+                "femoral vessels become the popliteal vessels there",
                 "Groin pain (pubalgia) and adductor strains, common in footballers",
                 "The gracilis tendon is used as a graft to reconstruct the anterior "
                 "cruciate ligament (hamstring graft with semitendinosus)",
