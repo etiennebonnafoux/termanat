@@ -34,7 +34,8 @@ TEXTS: dict[str, StructureText] = {
                 "on the left, held by chordae tendineae and papillary muscles",
                 "Arterial valves: pulmonary and aortic, each with three semilunar "
                 "cusps",
-                "Wall: endocardium, myocardium, epicardium; all surrounded by the "
+                "Wall: endocardium, myocardium, epicardium (= visceral layer of serous "
+                "pericardium); all surrounded by the "
                 "pericardium (fibrous and serous)",
                 "Conducting system: sinuatrial node, atrioventricular node, "
                 "atrioventricular bundle (of His) and its branches, Purkinje network",
@@ -61,7 +62,8 @@ TEXTS: dict[str, StructureText] = {
             "innervation": [
                 "Intrinsic automaticity: the sinuatrial node sets the rhythm (60 to "
                 "100 beats per minute at rest)",
-                "Sympathetic (cervical and upper thoracic ganglia): speeds up and "
+                "Sympathetic (cervical and upper thoracic ganglia, T1–T4/T5): speeds up "
+                "and "
                 "strengthens contractions",
                 "Parasympathetic (vagus nerves, X): slows the heart",
             ],
@@ -79,11 +81,10 @@ TEXTS: dict[str, StructureText] = {
             "The heart beats about 100,000 times a day and pumps about 5 litres of "
             "blood per minute at rest."
         ),
-        old_names=["auricles (for the atria)", "sigmoid valves (for the semilunar valves)"],
+        old_names=["auricles (for the atria)", "sigmoid valves (for the semilunar cusps)"],
     ),
     "A": StructureText(
         name="Ascending aorta and aortic arch",
-        old_names=["arch of the aorta"],
         kind="Elastic artery",
         region="Thorax: middle mediastinum (ascending aorta), then superior (arch)",
         count="1 (unpaired)",
@@ -189,7 +190,8 @@ TEXTS: dict[str, StructureText] = {
                 "trunk, continuous murmur",
                 "Pulmonary auscultation area: left 2nd intercostal space, at the "
                 "sternal border",
-                "Pulmonary hypertension: normal pressure is about 25/10 mmHg",
+                "Pulmonary hypertension: defined as mean pulmonary arterial pressure "
+                "> 20 mmHg (ESC 2022; ≥ 25 mmHg formerly)",
             ],
         },
         fact=(
@@ -279,8 +281,9 @@ TEXTS: dict[str, StructureText] = {
                 "below the superior mesenteric artery",
             ],
             "clinical": [
-                "Deep vein thrombosis: for recurrent pulmonary embolism, a vena cava "
-                "filter can be placed below the renal veins",
+                "Deep vein thrombosis: a vena cava filter can be placed below the renal "
+                "veins when anticoagulation is contraindicated or pulmonary embolism "
+                "recurs despite adequate anticoagulation",
                 "Compression by the pregnant uterus when lying supine (faintness, low "
                 "blood pressure): pregnant women are positioned on their left side",
                 "Because it lies on the right, the right renal vein is very short: the "
@@ -369,8 +372,6 @@ TEXTS: dict[str, StructureText] = {
                 "Brain and meninges, through the dural venous sinuses",
                 "Face and neck: facial, lingual, pharyngeal, superior and middle "
                 "thyroid veins",
-                "At its end (venous angle): thoracic duct on the left, right lymphatic "
-                "duct on the right",
             ],
             "relations": [
                 "In the carotid sheath, lateral to the artery, with the vagus nerve "
@@ -379,12 +380,15 @@ TEXTS: dict[str, StructureText] = {
                 "Low down, it lies in the small triangle between the sternal and "
                 "clavicular heads of the sternocleidomastoid",
                 "Accompanied by the deep cervical lymph nodes (jugular chain)",
+                "At the jugulo-subclavian venous angle: thoracic duct (left), right "
+                "lymphatic duct (right)",
             ],
             "clinical": [
                 "Classic route for a central venous catheter, preferably on the right "
                 "(direct path to the superior vena cava), under ultrasound guidance",
-                "Jugular venous pulse and distension: signs of raised right atrial "
-                "pressure (right heart failure)",
+                "Jugular venous pulse (internal jugular), hepatojugular reflux and "
+                "jugular distension (most visible on the external jugular): signs of "
+                "raised right atrial pressure (right heart failure)",
                 "Neck dissection along the jugular-carotid lymph nodes in head and "
                 "neck cancers",
             ],
@@ -410,7 +414,8 @@ TEXTS: dict[str, StructureText] = {
                 "Passes between the anterior scalene (in front) and the middle "
                 "scalene (behind): the scalene gap",
                 "Three parts: medial to, behind and lateral to the anterior scalene",
-                "Becomes the axillary artery at the lateral border of the 1st rib",
+                "Becomes the axillary artery at the lateral border of the 1st rib "
+                "(classical French texts: middle of the clavicle)",
             ],
             "branches": [
                 "Vertebral artery: ascends through the transverse foramina from C6 to "
@@ -454,7 +459,8 @@ TEXTS: dict[str, StructureText] = {
         ),
         sections={
             "course": [
-                "Begins at the lower border of the teres major muscle",
+                "Begins at the lower border of the teres major muscle (classical French "
+                "texts: lower border of the pectoralis major)",
                 "Descends on the medial side of the arm, in the medial bicipital "
                 "groove, along the medial border of the biceps",
                 "Ends in the cubital fossa, opposite the neck of the radius, just "
@@ -635,7 +641,8 @@ TEXTS: dict[str, StructureText] = {
         count="1 (unpaired)",
         description=(
             "First unpaired visceral branch of the abdominal aorta, 1 to 2 cm long. "
-            "It supplies the foregut organs: stomach, first part of the duodenum, "
+            "It supplies the foregut organs: stomach, duodenum down to the major "
+            "papilla, "
             "liver and biliary tract, pancreas, and also the spleen."
         ),
         sections={
@@ -649,8 +656,8 @@ TEXTS: dict[str, StructureText] = {
                 "Left gastric artery: lesser curvature of the stomach and abdominal "
                 "oesophagus",
                 "Common hepatic artery: gives the gastroduodenal artery then becomes "
-                "the hepatic artery proper (liver, gallbladder through the cystic "
-                "artery)",
+                "the hepatic artery proper (liver; cystic artery to the gallbladder, "
+                "usually from the right hepatic artery)",
                 "Splenic artery: runs along the upper border of the pancreas to the "
                 "spleen, gives the short gastric and left gastro-omental arteries",
             ],
@@ -743,7 +750,8 @@ TEXTS: dict[str, StructureText] = {
                 "the femoral artery",
             ],
             "relations": [
-                "The ureter crosses in front of the iliac bifurcation",
+                "The ureter crosses in front of the iliac bifurcation (often the external "
+                "iliac on the right, the common iliac on the left; varies between textbooks)",
                 "The left common iliac vein passes behind the right common iliac "
                 "artery to reach the inferior vena cava",
                 "Covered by the posterior parietal peritoneum; common iliac lymph "

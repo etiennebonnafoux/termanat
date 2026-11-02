@@ -37,9 +37,11 @@ TEXTS: dict[str, StructureText] = {
                 "à gauche, tenues par cordages tendineux et muscles papillaires",
                 "Valves artérielles : pulmonaire et aortique, chacune à trois "
                 "valvules semi-lunaires",
-                "Paroi : endocarde, myocarde, épicarde ; le tout entouré par le "
+                "Paroi : endocarde, myocarde, épicarde (= feuillet viscéral du péricarde "
+                "séreux) ; le tout entouré par le "
                 "péricarde (fibreux et séreux)",
-                "Tissu nodal : nœud sinu-atrial, nœud atrioventriculaire, faisceau "
+                "Tissu nodal : nœud sinu-atrial (de Keith et Flack), nœud "
+                "atrioventriculaire (d'Aschoff-Tawara), faisceau "
                 "atrioventriculaire (de His) et ses branches, réseau de Purkinje",
             ],
             "relations": [
@@ -64,7 +66,8 @@ TEXTS: dict[str, StructureText] = {
             "innervation": [
                 "Automatisme propre : le nœud sinu-atrial donne le rythme (60 à 100 "
                 "battements par minute au repos)",
-                "Sympathique (ganglions cervicaux et thoraciques hauts) : accélère et "
+                "Sympathique (ganglions cervicaux et thoraciques hauts, T1-T4/T5) : "
+                "accélère et "
                 "renforce les contractions",
                 "Parasympathique (nerfs vagues, X) : ralentit le cœur",
             ],
@@ -85,7 +88,7 @@ TEXTS: dict[str, StructureText] = {
         ),
         old_names=[
             "oreillettes (pour les atriums)",
-            "valvules sigmoïdes (pour les valves artérielles)",
+            "valvules sigmoïdes (pour les valvules semi-lunaires)",
         ],
     ),
     "A": StructureText(
@@ -147,7 +150,7 @@ TEXTS: dict[str, StructureText] = {
             ],
         },
         fact=(
-            "Le ligament artériel, sous l'arc, est le reste du conduit artériel qui, "
+            "Le ligament artériel, sous l'arc, est le reste du conduit artériel (ancien canal artériel) qui, "
             "chez le fœtus, faisait passer le sang du tronc pulmonaire à l'aorte en "
             "évitant les poumons."
         ),
@@ -192,12 +195,13 @@ TEXTS: dict[str, StructureText] = {
             "clinical": [
                 "Embolie pulmonaire : obstruction par un caillot, le plus souvent venu "
                 "d'une thrombose veineuse profonde des membres inférieurs",
-                "Persistance du conduit artériel : shunt de l'aorte vers le tronc "
+                "Persistance du conduit artériel (persistance du canal artériel) : shunt de l'aorte vers le tronc "
                 "pulmonaire, souffle continu",
                 "Foyer d'auscultation pulmonaire : 2e espace intercostal gauche, au "
                 "bord du sternum",
-                "Hypertension pulmonaire : la pression normale est d'environ "
-                "25/10 mmHg",
+                "Hypertension pulmonaire : définie par une pression artérielle "
+                "pulmonaire moyenne > 20 mmHg (ESC 2022 ; ≥ 25 mmHg dans les anciennes "
+                "définitions)",
             ],
         },
         fact=(
@@ -289,8 +293,9 @@ TEXTS: dict[str, StructureText] = {
                 "l'artère mésentérique supérieure",
             ],
             "clinical": [
-                "Thrombose veineuse profonde : en cas d'embolie pulmonaire récidivante, "
-                "un filtre cave peut être posé sous les veines rénales",
+                "Thrombose veineuse profonde : un filtre cave peut être posé sous les "
+                "veines rénales en cas de contre-indication aux anticoagulants ou "
+                "d'embolie récidivante sous traitement bien conduit",
                 "Compression par l'utérus gravide en décubitus dorsal (malaise, "
                 "hypotension) : on installe la femme enceinte sur le côté gauche",
                 "Située à droite, elle rend la veine rénale droite très courte : on "
@@ -339,7 +344,7 @@ TEXTS: dict[str, StructureText] = {
                 "En avant : muscle sterno-cléido-mastoïdien, sous son bord antérieur, "
                 "et muscle omo-hyoïdien",
                 "En arrière : processus transverses cervicaux (tubercule carotidien de "
-                "C6) et tronc sympathique cervical",
+                "C6, ou de Chassaignac) et tronc sympathique cervical",
                 "En dedans : trachée, œsophage, glande thyroïde, puis larynx et "
                 "pharynx",
             ],
@@ -348,7 +353,7 @@ TEXTS: dict[str, StructureText] = {
                 "hauteur du cartilage thyroïde",
                 "Sinus carotidien (barorécepteur, nerf glosso-pharyngien IX) au début "
                 "de la carotide interne : son massage ralentit le cœur",
-                "Glomus carotidien : chémorécepteur situé dans la bifurcation",
+                "Corps carotidien (ancien glomus carotidien) : chémorécepteur situé dans la bifurcation",
                 "Sténose athéromateuse de la bifurcation : cause d'accident vasculaire "
                 "cérébral ischémique, traitée par endartériectomie",
             ],
@@ -381,8 +386,6 @@ TEXTS: dict[str, StructureText] = {
                 "Encéphale et méninges, par les sinus veineux de la dure-mère",
                 "Face et cou : veines faciale, linguale, pharyngiennes, thyroïdiennes "
                 "supérieure et moyenne",
-                "À sa terminaison (angle veineux) : conduit thoracique à gauche, "
-                "conduit lymphatique droit à droite",
             ],
             "relations": [
                 "Dans la gaine carotidienne, latérale à l'artère, avec le nerf vague "
@@ -392,11 +395,14 @@ TEXTS: dict[str, StructureText] = {
                 "claviculaire du sterno-cléido-mastoïdien",
                 "Longée par les nœuds lymphatiques cervicaux profonds (chaîne "
                 "jugulaire)",
+                "À l'angle veineux jugulo-subclavier se jettent le conduit thoracique "
+                "(ancien canal thoracique, à gauche) et le conduit lymphatique droit",
             ],
             "clinical": [
                 "Voie d'abord classique du cathéter veineux central, plutôt à droite "
                 "(trajet direct vers la veine cave supérieure), sous échographie",
-                "Pouls veineux jugulaire et turgescence jugulaire : signes "
+                "Pouls jugulaire (jugulaire interne), reflux hépato-jugulaire et "
+                "turgescence jugulaire (surtout visible sur la jugulaire externe) : signes "
                 "d'élévation de la pression de l'atrium droit (insuffisance cardiaque "
                 "droite)",
                 "Curage ganglionnaire jugulo-carotidien dans les cancers de la tête "
@@ -426,14 +432,16 @@ TEXTS: dict[str, StructureText] = {
                 "moyen (en arrière) : défilé des scalènes",
                 "Trois parties : en dedans, en arrière et en dehors du scalène "
                 "antérieur",
-                "Devient l'artère axillaire au bord latéral de la 1re côte",
+                "Devient l'artère axillaire au bord latéral de la 1re côte (milieu de la "
+                "clavicule dans les ouvrages français classiques)",
             ],
             "branches": [
                 "Artère vertébrale : monte dans les foramens transversaires de C6 à "
                 "C1 ; tronc cérébral, cervelet, lobes occipitaux",
-                "Artère thoracique interne : descend derrière les cartilages costaux, "
+                "Artère thoracique interne (ancienne mammaire interne) : descend derrière les cartilages costaux, "
                 "à 1 cm du bord du sternum",
-                "Tronc thyro-cervical (dont l'artère thyroïdienne inférieure) et tronc "
+                "Tronc thyro-cervical (ancien tronc thyro-bicervico-scapulaire, dont "
+                "l'artère thyroïdienne inférieure) et tronc "
                 "costo-cervical",
                 "Artère dorsale de la scapula, inconstante comme branche directe",
             ],
@@ -472,7 +480,8 @@ TEXTS: dict[str, StructureText] = {
         ),
         sections={
             "course": [
-                "Commence au bord inférieur du muscle grand rond",
+                "Commence au bord inférieur du muscle grand rond (bord inférieur du grand "
+                "pectoral dans les ouvrages français classiques)",
                 "Descend à la face médiale du bras, dans le sillon bicipital médial, "
                 "le long du bord médial du biceps",
                 "Se termine dans la fosse cubitale, en regard du col du radius, un peu "
@@ -659,8 +668,9 @@ TEXTS: dict[str, StructureText] = {
         count="1 (impair)",
         description=(
             "Première branche viscérale impaire de l'aorte abdominale, longue de 1 à "
-            "2 cm. Il irrigue les organes de l'intestin antérieur : estomac, début du "
-            "duodénum, foie et voies biliaires, pancréas, et aussi la rate."
+            "2 cm. Il irrigue les organes de l'intestin antérieur : estomac, duodénum "
+            "jusqu'à la papille majeure, foie et voies biliaires, pancréas, et aussi "
+            "la rate."
         ),
         sections={
             "course": [
@@ -673,8 +683,8 @@ TEXTS: dict[str, StructureText] = {
                 "Artère gastrique gauche (ancienne coronaire stomachique) : petite "
                 "courbure de l'estomac et œsophage abdominal",
                 "Artère hépatique commune : donne l'artère gastro-duodénale puis "
-                "devient l'artère hépatique propre (foie, vésicule par l'artère "
-                "cystique)",
+                "devient l'artère hépatique propre (foie ; artère cystique pour la "
+                "vésicule, le plus souvent née de l'artère hépatique droite)",
                 "Artère splénique : longe le bord supérieur du pancréas vers la rate, "
                 "donne les artères gastriques courtes et gastro-omentale gauche",
             ],
@@ -720,7 +730,7 @@ TEXTS: dict[str, StructureText] = {
             ],
             "relations": [
                 "Dans le pédicule rénal, d'avant en arrière : veine rénale, artère "
-                "rénale, pelvis rénal",
+                "rénale, pelvis rénal (bassinet)",
                 "La veine rénale gauche, longue, passe en avant de l'aorte sous "
                 "l'artère mésentérique supérieure",
                 "Artères rénales accessoires (polaires) fréquentes, nées directement "
@@ -767,7 +777,8 @@ TEXTS: dict[str, StructureText] = {
                 "l'artère fémorale",
             ],
             "relations": [
-                "L'uretère croise en avant la bifurcation iliaque",
+                "L'uretère croise en avant la bifurcation iliaque (souvent l'iliaque "
+                "externe à droite, l'iliaque commune à gauche ; varie selon les ouvrages)",
                 "La veine iliaque commune gauche passe en arrière de l'artère iliaque "
                 "commune droite pour rejoindre la veine cave inférieure",
                 "Recouverte par le péritoine pariétal postérieur ; nœuds lymphatiques "
@@ -814,7 +825,7 @@ TEXTS: dict[str, StructureText] = {
             "branches": [
                 "Branches superficielles : épigastrique superficielle, circonflexe "
                 "iliaque superficielle, pudendales externes",
-                "Artère profonde de la cuisse, environ 4 cm sous le ligament inguinal, "
+                "Artère profonde de la cuisse (ancienne fémorale profonde), environ 4 cm sous le ligament inguinal, "
                 "avec les artères circonflexes fémorales et les perforantes",
                 "Artère descendante du genou",
             ],
@@ -833,7 +844,8 @@ TEXTS: dict[str, StructureText] = {
                 "angioplastie) ; la veine, médiale, sert à l'abord veineux",
                 "Artériopathie oblitérante des membres inférieurs : sténoses "
                 "fréquentes dans le canal des adducteurs, claudication intermittente",
-                "Hernie fémorale : dans le canal fémoral, en dedans de la veine "
+                "Hernie fémorale (ancienne hernie crurale) : dans le canal fémoral "
+                "(ancien canal crural), en dedans de la veine "
                 "fémorale",
             ],
         },
